@@ -26,13 +26,13 @@ public class SendemailApplicationTests {
 
     	MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
-        // 发送方邮箱
+        
         helper.setFrom(SendEmail);
-        // 接收方邮箱
+       
         helper.setTo(receiveEmail);
-        // 主题
+       
         helper.setSubject("Test");
-        // 内容
+       
         helper.setText("Junchi Song");
         javaMailSender.send(mimeMessage);
         return "Send successfully";
